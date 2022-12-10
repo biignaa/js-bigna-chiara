@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fruchtsalat</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <!--Startbildschirm (wird zu Beginn eingeblendet)-->
+    <div id="start-screen">
+      <h1>
+        Hallo Spieler*in.
+        <br />
+        Wir wollen einen Fruchtsalat zubereiten, doch uns fehlen noch die
+        Zutaten.
+        <br />
+        Wir brauchen 7 Äpfel, 4 Bananen und 5 Erdbeeren. <br />
+        Um an die Zutaten zu gelangen, musst du sie mit dem Korb einfangen, aber
+        AUFGEPASST!<br />
+        Wenn du einen Fliegenpilz einfängst, verfaulen die Früchte und du musst von
+        vorne anfangen.<br />
+        Viel Glück und danke für deine Hilfe.<br />
+        Du kannst den Korb mit den Pfeiltasten nach links und rechts Bewegen.
+      </h1>
+      <button class="button" onclick="startGame()">Start Game</button>
+    </div>
+
+    <!--Game (wird zu Beginn ausgeblendet)-->
+    <div id="game">
+      <div id="side-bar">
+        <div id="list">
+          <div id="counter-wrapper">
+            <div class="counter">
+              <img src="img/banana.png" alt="" /><span
+                id="collected-bananas"
+              ></span>
+            </div>
+            <div class="counter">
+              <img src="img/strawberry.png" alt="" /><span
+                id="collected-strawberries"
+              ></span>
+            </div>
+            <div class="counter">
+              <img src="img/apple.png" alt="" /><span
+                id="collected-apples"
+              ></span>
+            </div>
+          </div>
+        </div>
+        <span id="timer">00.0s</span>
+      </div>
+      <div id="playground">
+        <img id="player" src="img/bucket.png" alt="player" />
+      </div>
+    </div>
+
+    <!--Endbildschirm (wird zu Beginn ausgeblendet)-->
+    <div class="after-game-screen">
+      <h1></h1>
+      <span id="used-time">Benötigte Zeit:</span>
+      <div id="counter"></div>
+      <button class="button" onclick="location.reload()"></button>
+    </div>
+  </body>
+</html>
+
+<script src="https://jsgame.bbz.cloud/scripts/v1/keyboard.js"></script>
+<script src="https://jsgame.bbz.cloud/scripts/v1/collision.js"></script>
+<script src="https://jsgame.bbz.cloud/scripts/v1/timer.js"></script>
+<script src="main.js"></script>
